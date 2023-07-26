@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCCA2EAF-261B-4637-8329-D469E0752F37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ANPR_General</RootNamespace>
+    <AssemblyName>ANPR - All</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Plakasoft - ANPR</ProductName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>car1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Shared.v16.1, Version=16.1.20161.2156, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Misc.v16.1, Version=16.1.20161.2156, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v16.1, Version=16.1.20161.2156, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Excel.14.0.4760.1000\lib\net20\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PanelGradient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Third Party Lib\PanelGradient.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SDTAnpr.Net, Version=1.2.58.1, Culture=neutral, PublicKeyToken=0765bdca31cb3ae3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SDTAnpr.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleLPR3">
+      <HintPath>bin\Third Party Lib\SimpleLPR3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.7.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.7.0.0\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="VideoGrabberNET, Version=4.8.0.0, Culture=neutral, PublicKeyToken=c292da7395203839, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Third Party Lib\VideoGrabberNET.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\CaptureSetting.cs" />
+    <Compile Include="Entity\City.cs" />
+    <Compile Include="Entity\DeviceCipher.cs" />
+    <Compile Include="Entity\Devices.cs" />
+    <Compile Include="Entity\DeviceTrigger.cs" />
+    <Compile Include="Entity\Globalvars.cs" />
+    <Compile Include="Entity\Notes.cs" />
+    <Compile Include="Entity\ProcessTrigger.cs" />
+    <Compile Include="Entity\ResponseStatus.cs" />
+    <Compile Include="Entity\ShellyRelayControl.cs" />
+    <Compile Include="frmDashboardSlider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboardSlider.Designer.cs">
+      <DependentUpon>frmDashboardSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDBsetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDBsetting.Designer.cs">
+      <DependentUpon>frmDBsetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIOTDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIOTDevices.Designer.cs">
+      <DependentUpon>frmIOTDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Communication.cs" />
+    <Compile Include="DAL.cs" />
+    <Compile Include="Entity\ANPRDetail.cs" />
+    <Compile Include="Entity\ANPRReport.cs" />
+    <Compile Include="Entity\CameraInfo.cs" />
+    <Compile Include="Entity\CompInfo.cs" />
+    <Compile Include="Entity\DeviceLicx.cs" />
+    <Compile Include="Entity\Licx.cs" />
+    <Compile Include="Entity\PictureSlider.cs" />
+    <Compile Include="Entity\SMTP.cs" />
+    <Compile Include="Entity\Users.cs" />
+    <Compile Include="Entity\VehicleMaster.cs" />
+    <Compile Include="frmANPR_WareLogic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmANPR_WareLogic.Designer.cs">
+      <DependentUpon>frmANPR_WareLogic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDefaultScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDefaultScreen.Designer.cs">
+      <DependentUpon>frmDefaultScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfo.Designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmANPR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmANPR.Designer.cs">
+      <DependentUpon>frmANPR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNP_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNP_Detail.Designer.cs">
+      <DependentUpon>frmNP_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehicleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehicleUpdate.Designer.cs">
+      <DependentUpon>frmVehicleUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Dialogsbox.cs" />
+    <Compile Include="Services\ExcelUtlity.cs" />
+    <Compile Include="Services\ProcessTrg.cs" />
+    <Compile Include="Services\ShellyAPI.cs" />
+    <Compile Include="Services\SqlHelper.cs" />
+    <Compile Include="Services\SystemSetting.cs" />
+    <EmbeddedResource Include="frmANPR_WareLogic.resx">
+      <DependentUpon>frmANPR_WareLogic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboardSlider.resx">
+      <DependentUpon>frmDashboardSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDBsetting.resx">
+      <DependentUpon>frmDBsetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDefaultScreen.resx">
+      <DependentUpon>frmDefaultScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfo.resx">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmANPR.resx">
+      <DependentUpon>frmANPR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNP_Detail.resx">
+      <DependentUpon>frmNP_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVehicleUpdate.resx">
+      <DependentUpon>frmVehicleUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Digital7Italic-BW658.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Digital7Italic-BW658.ttf" />
+    <None Include="Resources\live1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\live1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\live2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vehicle-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.jpg" />
+    <None Include="Resources\small.png" />
+    <None Include="Resources\alienfencelogoyatay.png" />
+    <None Include="Resources\dashboard.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\liveview.png" />
+    <None Include="Resources\reports.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\vehicle-list.png" />
+    <None Include="Resources\log-out.png" />
+    <None Include="Resources\veh1.png" />
+    <None Include="Resources\alienfence_bg.jpg" />
+    <None Include="Resources\previous.png" />
+    <None Include="Resources\next1.png" />
+    <None Include="Resources\prv1.jpg" />
+    <None Include="Resources\prv2.jpg" />
+    <None Include="Resources\prev2.png" />
+    <None Include="Resources\next2.png" />
+    <None Include="Resources\ref1.png" />
+    <None Include="Resources\ref2.png" />
+    <Content Include="car1.ico" />
+    <Content Include="favicon.ico" />
+    <None Include="Resources\favicon.png" />
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\instagram.png" />
+    <None Include="Resources\linkedin.png" />
+    <None Include="Resources\excel-icon-12.png" />
+    <None Include="Resources\pdf.png" />
+    <None Include="Resources\white-list-ico.png" />
+    <None Include="Resources\white-list-ico-small.png" />
+    <None Include="Resources\white-list-ico-small1.png" />
+    <None Include="Resources\white-list-ico-small2.png" />
+    <None Include="Resources\black-list-cars-ico.png" />
+    <None Include="Resources\monthly-volume-ico.png" />
+    <None Include="Resources\monthly-volume-ico1.png" />
+    <None Include="Resources\go-fisrt-push-button.png" />
+    <None Include="Resources\go-fisrt-push-button1.png" />
+    <None Include="Resources\push-right-first-button.png" />
+    <None Include="Resources\push-latest-button.png" />
+    <None Include="Resources\push-hover-button.png" />
+    <None Include="Resources\blue-circle.png" />
+    <None Include="Resources\pink-circle.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\Next-hover.png" />
+    <None Include="Resources\Next-Last.png" />
+    <None Include="Resources\Next-Last-Hover.png" />
+    <None Include="Resources\Prev.png" />
+    <None Include="Resources\Prev-hover.png" />
+    <None Include="Resources\Prev-Last.png" />
+    <None Include="Resources\Prev-Last-Hover.png" />
+    <None Include="Resources\save11.png" />
+    <None Include="Resources\pdf-icons.png" />
+    <None Include="Resources\Login-Screen.png" />
+    <None Include="Resources\plakasoft-anpr-logo.jpg" />
+    <None Include="Resources\plakasoft-login1.jpg" />
+    <None Include="Resources\setting1.png" />
+    <None Include="Resources\grid-icon.png" />
+    <None Include="Resources\excel-icon.png" />
+    <None Include="Resources\pdf-icon.png" />
+    <None Include="Resources\12.jpg" />
+    <None Include="Resources\np2.JPG" />
+    <None Include="Resources\CDT-01.bmp" />
+    <Content Include="Resources\yellow-circle.png" />
+    <None Include="bin\Debug\circle-32.ico" />
+    <Content Include="Resources\green-circle.png" />
+    <Content Include="Resources\red-circle.png" />
+    <Content Include="Resources\red-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{01f1a03e-f7e7-4a56-9006-f0f4356949e5}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
